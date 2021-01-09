@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>九九乘法表(JavaScript)</title>
+</head>
+<body>
+	<center>
+		<a href="https://1110832079.github.io/bomb/">回首頁</a>
+	</center>
+	<script>
+		document.write("<table align=\"center\" width=\"300\" border=\"1\" style=\"border-collapse: collapse; border-width: 2px\">"+"<thead>"+"<td colspan=\"3\" align=\"center\" bgcolor=\"black\" style=\"color: #FFFFFF; font-size: 14px; font-weight: bold\">"+"九九乘法表"+"</td>");
+		for (i = 0;i<=9; i++) {
+			if (i%3==1)
+				html+="<tr>";
+			html+="<td>";
+			for (j = 1; j <= 9;j++) {
+				if ((i*j)<=9) {
+					html+=i+"*"+j+"="+"&nbsp;&nbsp;"+(i*j)+"<br>";
+				}
+				else
+				{
+					html +=i+"*"+j+"="+(i*j)+"<br>";
+				}
+			}
+			html +="</td>";
+			if (i%3==0)
+				html +="</tr>";
+		}
+		html +="</table>";
+		document.write(html);
+	</script>
+	<table border="1" align="center">
+</body>
+</html>
